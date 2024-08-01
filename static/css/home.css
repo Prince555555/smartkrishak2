@@ -1,0 +1,98 @@
+/* Reset default margin and padding on the body element */
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Hide any potential scrollbars on the body */
+    font-family: Arial, sans-serif; /* Set a common font family */
+}
+
+/* Style the main section containing the navbar, h1, and content */
+.main-section {
+    position: relative;
+    height: 100vh; /* Set the section to fill the viewport height */
+    background-image: url('../static/images/field.jpg');
+    background-size: cover;
+    background-position: center bottom; /* Adjust to position the background image */
+}
+
+/* Style the navbar */
+.navbar {
+    background-color: transparent; /* Transparent background for the navbar */
+    padding: 20px; /* Add padding to the navbar for spacing */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between; /* To position logo to the left and li items to the right */
+    align-items: center; /* Vertically center the content */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Add shadow to the navbar */
+}
+
+.logo {
+    color: white; /* Set logo text color to white */
+    font-size: 24px; /* Adjust font size as needed */
+    font-weight: bold;
+}
+
+.navbar-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px; /* Adjust spacing between navbar items */
+}
+
+.navbar-links li {
+    position: relative;
+}
+
+.navbar-links li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px; /* Add padding for better button appearance */
+    border-radius: 5px; /* Add rounded corners to buttons */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition for hover effect */
+}
+
+.navbar-links li a:hover {
+    background-color: rgba(0, 0, 0, 0.2); /* Change background color on hover */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4); /* Add shadow on hover */
+}
+
+/* Style the h1 element */
+h1 {
+    position: absolute;
+    bottom: 20px; /* Adjust to position the h1 element above the brown paddy part */
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff; /* Set text color to white */
+    background-color: rgba(139, 69, 19, 0.5); /* Semi-transparent brown background */
+    padding: 10px 20px; /* Add padding for better visibility */
+}
+
+/* Style the content section */
+.content {
+    background-color: rgba(255, 255, 255, 0.9); /* Add a semi-transparent white background */
+    padding: 20px;
+    margin: 50px auto; /* Center the content horizontally */
+    max-width: 800px; /* Set a maximum width for content */
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Add shadow to the content */
+}
+
+/* Style the About Us section */
+.about-us {
+    text-align: center;
+}
+
+.about-us h2 {
+    font-size: 24px;
+    color: #333;
+}
+
+.about-us p {
+    font-size: 16px;
+    color: #666;
+}

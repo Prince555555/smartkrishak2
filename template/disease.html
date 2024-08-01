@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./static/css/disease.css">
+    <title>Disease</title>
+    <link rel="stylesheet" href="../static/css/bootstrap.css">
+    <link rel="stylesheet" href="../static/css/landing-page.css">
+    <!-- <link href="assets/css/bootstrap.css" rel="stylesheet" /> -->
+    <!-- <link href="assets/css/landing-page.css" rel="stylesheet"/> -->
+
+    <!--     Fonts and icons     -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400,300' rel='stylesheet' type='text/css'>
+    <!-- <link href="assets/css/pe-icon-7-stroke.css" rel="stylesheet" /> -->
+    <link rel="stylesheet" href="../static/css/pe-icon-7-stroke.css">
+</head>
+<body>
+    <section class="nav-section">
+        <nav class="navbar navbar-transparent navbar-top" role="navigation">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button id="menu-toggle" type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example">
+                    </button>
+                    <a href="/">
+                        <div class="logo-container">
+                            <div class="logo">
+                                <img src="../static/img/new_logo.png" alt="Creative Tim Logo">
+                            </div>
+                            <div class="brand">
+                                Krishak
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="example" >
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="/crop">
+                            
+                            Crop
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/disease">
+                            
+                            Disease
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/rental">
+                            
+                            Rental
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+        </nav>
+    </section>
+    <main>
+        
+        <section>
+
+            <h1>Image Prediction</h1>
+            <article>
+            <label for="image-upload">Upload Image:</label>
+            <input type="file" id="image-upload" accept="image/*" />
+            </article>
+            <button id="predict-button">Predict</button>
+            <h2>Result:</h2>
+            <textarea id="result" rows="10" cols="50" readonly></textarea>
+        
+        </section>
+        
+    <!-- <script>
+        const predictButton = document.getElementById('predict-button');
+        const imageUrlInput = document.getElementById('image-url');
+        const resultTextarea = document.getElementById('result');
+
+        predictButton.addEventListener('click', () => {
+            const imageUrl = imageUrlInput.value;
+            // Replace this with your code to perform image prediction
+            // For now, we'll just display a placeholder result
+            const predictionResult = 'Placeholder prediction result for ' + imageUrl;
+            resultTextarea.value = predictionResult;
+        });
+    </script> -->
+    
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="social-area pull-right">
+                <a class="btn btn-social btn-facebook btn-simple">
+                <i class="fa fa-facebook-square"></i>
+                </a>
+                <a class="btn btn-social btn-twitter btn-simple">
+                <i class="fa fa-twitter"></i>
+                </a>
+                <a class="btn btn-social btn-pinterest btn-simple">
+                <i class="fa fa-pinterest"></i>
+                </a>
+            </div>
+            <div class="copyright">
+                &copy; 2023 <a href="#">Smart Krishi</a>, made with love
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
+
+
+

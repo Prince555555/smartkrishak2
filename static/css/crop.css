@@ -1,0 +1,75 @@
+h1 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333; 
+}
+
+
+h2 {
+    font-size: 36px; 
+    color: #007BFF; 
+    text-transform: uppercase; 
+    font-weight: bold; 
+    text-align: center; 
+    margin: 20px 0; 
+}
+
+  
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+article{
+    margin: 10px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+  
+input[type="text"] {
+    width: 70%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+  
+input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+  
+.nav-section{
+    /* color: aquamarine; */
+    background-color: aquamarine;
+}
+
+p#predict{
+    padding-left: 200px;
+    display: inline;
+    font-size: large;
+    color: #007BFF;
+    text-transform: capitalize;
+}
+
+.footer{
+    margin-top: 300px;
+
+}

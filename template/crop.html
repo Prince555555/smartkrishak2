@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Prediction</title>
+    <link rel="stylesheet" href="../static/css/crop.css">
+
+    <link rel="stylesheet" href="../static/css/bootstrap.css">
+    <link rel="stylesheet" href="../static/css/landing-page.css">
+    <!-- <link href="assets/css/bootstrap.css" rel="stylesheet" /> -->
+    <!-- <link href="assets/css/landing-page.css" rel="stylesheet"/> -->
+
+    <!--     Fonts and icons     -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400,300' rel='stylesheet' type='text/css'>
+    <!-- <link href="assets/css/pe-icon-7-stroke.css" rel="stylesheet" /> -->
+    <link rel="stylesheet" href="../static/css/pe-icon-7-stroke.css">
+</head>
+<body>
+    <main>
+        <section class="nav-section">
+            <nav class="navbar navbar-transparent navbar-top" role="navigation">
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button id="menu-toggle" type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example">
+                        <span class="sr-only">Toggle navigation</span>
+                        
+                        </button>
+                        <a href="/">
+                            <div class="logo-container">
+                                <div class="logo">
+                                    <img src="../static/img/new_logo.png" alt="Creative Tim Logo">
+                                </div>
+                                <div class="brand">
+                                    Krishak
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="example" >
+                        <ul class="nav navbar-nav navbar-right">
+                            <li>
+                                <a href="/crop">
+                                
+                                Crop
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/disease">
+                                
+                                Disease
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/rental">
+                                
+                                Rental
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- /.navbar-collapse -->
+                </div>
+            </nav>
+            <!-- <div class="wrapper">
+                <div class="parallax filter-gradient blue" data-color="blue">
+                    <div class="parallax-background">
+                    </div>
+                    <div class= "container">
+                        <div class="row">
+                            <div class="col-md-5 hidden-xs">
+                                
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div> -->
+
+        </section>
+        <section>
+            <h2>Insert Your Data</h2>
+            <form id="predictionForm" method="GET" onsubmit="predictCrop(event)">
+                <article>
+                    <label for="Nitrogen">Nitrogen:</label>
+                    <input type="number" id="nitrogen" name="nitrogen">
+                </article>
+                <article>
+                    <label for="Phosphorus">Phosphorus:</label>
+                    <input type="number" id="phosphorus" name="phosphorus">
+                </article>
+                <article>
+                    <label for="Potassium">Potassium:</label>
+                    <input type="number" id="potassium" name="potassium">
+                </article>
+                <article>
+                    <label for="Temperature">Temperature:</label>
+                    <input type="number" id="temperature" name="temperature">
+                </article>
+                <article>
+                    <label for="Humidity">Humidity:</label>
+                    <input type="number" id="humidity" name="humidity">
+                </article>
+                <article>
+                    <label for="PH">PH:</label>
+                    <input type="number" id="ph" name="ph">
+                </article>
+                <article>
+                    <label for="Rainfall">Rainfall:</label>
+                    <input type="number" id="rainfall" name="Rainfall">
+                </article>
+                <article>
+                    <input type="submit" value="Predict" onclick="predictCrop()">
+                    <p id="predict"></p>
+                </article>
+                </form>
+                
+        </section>
+        </main>
+    <script>
+ function predictCrop(event) {
+            event.preventDefault(); 
+            const nitrogen = document.getElementById("nitrogen").value;
+            const phosphorus = document.getElementById("phosphorus").value;
+            const potassium = document.getElementById("potassium").value;
+            const temperature = document.getElementById("temperature").value;
+            const humidity = document.getElementById("humidity").value;
+            const ph = document.getElementById("ph").value;
+            const rainfall = document.getElementById("rainfall").value;
+            const inputData = {
+                "nitrogen": parseInt(nitrogen),
+                "phosphorus": parseInt(phosphorus),
+                "potassium": parseInt(potassium),
+                "temperature": parseInt(temperature),
+                "humidity": parseInt(humidity),
+                "ph": parseInt(ph),
+                "rainfall": parseInt(rainfall)
+            };
+
+            fetch("/crop", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(inputData),
+            })
+            .then((response) => response.json())
+            .then((data)=> {
+                const predictionResult = document.getElementById("predict")
+                predictionResult.innerHTML = data.prediction
+            })
+
+            .catch((error) => {
+                console.error("Error:", error);
+            });
+        }
+    </script>
+    <footer class="footer">
+        <div class="container">
+            <div class="social-area pull-right">
+                <a class="btn btn-social btn-facebook btn-simple">
+                <i class="fa fa-facebook-square"></i>
+                </a>
+                <a class="btn btn-social btn-twitter btn-simple">
+                <i class="fa fa-twitter"></i>
+                </a>
+                <a class="btn btn-social btn-pinterest btn-simple">
+                <i class="fa fa-pinterest"></i>
+                </a>
+            </div>
+            <div class="copyright">
+                &copy; 2023 <a href="#">Smart Krishi</a>, made with love
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

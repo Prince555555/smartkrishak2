@@ -1,0 +1,131 @@
+/* *{box-sizing: border-box;}
+/*Slideshow Container*/
+.slideshow-container{
+    max-width: 800px;
+    position: relative;
+    margin: auto;
+}
+.mySlides{
+    display: none;
+}
+.prev, .next{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: aliceblue;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6sec case;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+.next{
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+color: #f2f2f2;
+font-size: 15px;
+padding: 8px 12px;
+position: absolute;
+bottom: 8px;
+width: 100%;
+text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+color: #f2f2f2;
+font-size: 12px;
+padding: 8px 12px;
+position: absolute;
+top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+cursor: pointer;
+height: 15px;
+width: 15px;
+margin: 0 2px;
+background-color: #bbb;
+border-radius: 50%;
+display: inline-block;
+transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+animation-name: fade;
+animation-duration: 1.5s;
+}
+
+@keyframes fade {
+from {opacity: .4}
+to {opacity: 1}
+}
+/* Style the navigation container */
+nav {
+    background-color: lightgray; /* Background color for the navigation */
+    color:black; /* Text color for the navigation */
+    text-align: center; /* Center-align the content inside the navigation */
+    padding: 7px; /* Add some padding to the navigation */
+  }
+  
+  /* Style the navigation paragraph */
+  nav p {
+    margin: 0; /* Remove margin from the paragraph */
+  }
+  
+  /* Style the navigation logo (image) */
+  nav img {
+    max-width: 70px; /* Set a maximum width for the logo image */
+  }
+  
+  /* Style the navigation links (list items) */
+  nav ul {
+    list-style-type: none; /* Remove bullet points from the list */
+    padding: 0; /* Remove padding from the list */
+  }
+  
+  nav ul li {
+    display: inline; /* Display list items inline */
+    margin-right: 20px; /* Add some spacing between list items */
+  }
+  
+  /* Style the navigation links (anchor tags) */
+  nav ul li a {
+    text-decoration: none; /* Remove underlines from anchor tags */
+    color: black; /* Text color for anchor tags */
+    font-weight: bold; /* Make the text bold */
+  }
+  
+  /* Add hover effect to navigation links */
+  nav ul li a:hover {
+    color: #ff9900; /* Change text color on hover */
+  }
+  h1{
+    font-size: larger;
+    font-family: cursive;
+    text-align: center;
+    color: green;
+    font-weight: bolder;
+  }
+  body{
+    background: url(Agriculture.jpg) no-repeat;
+    width: 1000px;
+    height: 700px;
+  } */
